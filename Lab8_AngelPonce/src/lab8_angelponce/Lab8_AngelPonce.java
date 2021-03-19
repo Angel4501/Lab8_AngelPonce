@@ -17,6 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class Lab8_AngelPonce extends javax.swing.JFrame {
 
+ 
     /**
      * Creates new form Lab8_AngelPonce
      */
@@ -771,11 +772,14 @@ public class Lab8_AngelPonce extends javax.swing.JFrame {
         if (tftipo.getText().equals("estudiante") || tftipo.getText().equals("docente")
                 || tftipo.getText().equals("administrativo") || tftipo.getText().equals("ejecutivo")
                 || tftipo.getText().equals("decano")) {
+            String aux=tftipo.getText()+" ";
             //tatipos.append(tftipo.getText().toUpperCase());
             for (int i = 0; i < personas.size(); i++) {
-                JOptionPane.showMessageDialog(null, personas.get(i).getTipo());
-                JOptionPane.showMessageDialog(null, "tipo getText: "+tftipo.getText());
-                if (tftipo.getText().equals(personas.get(i).getTipo())) {
+                //JOptionPane.showMessageDialog(null, personas.get(i).getTipo());
+                //JOptionPane.showMessageDialog(null, "tipo getText: "+tftipo.getText());
+                System.out.println(personas.get(i).getTipo());
+                System.out.println("tipo getText:"+tftipo.getText());
+                if (aux.equals(personas.get(i).getTipo())) {
                     tatipos.append(personas.get(i).toString() + "\n\n");
                 } else {
                     JOptionPane.showMessageDialog(null, "Mira mi codigo, no se por que no lo imprime");
